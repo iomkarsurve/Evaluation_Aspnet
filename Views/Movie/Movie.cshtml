@@ -1,0 +1,33 @@
+﻿@model List<UserApp.Models.Movie>
+@{
+    ViewBag.Title = "Movie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div><b>Movie Data </b><br /></div>
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Title </th>
+        <th>Director </th>
+        <th>DateReleased</th>
+        <th>Hero</th>
+    </tr>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.ID</td>
+            <td>@m.Title</td>
+            <td>@m.Director</td>
+            <td>@m.DateReleased</td>
+            <td>@m.Hero</td>
+
+        </tr>
+    }
+
+
+
+</table> 
